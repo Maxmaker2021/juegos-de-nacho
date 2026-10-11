@@ -11,7 +11,7 @@
     "id": "gomera-loca",
     "nombre": "Gomera Loca",
     "descripcion": "Una gomera contra pollos voladores. Tenés tres vidas.",
-    "archivo": "",
+    "archivo": "juegos/gomera-loca.html",
     "estado": "jugable",
     "icono": "gomera"
   },
@@ -19,7 +19,7 @@
     "id": "penal-a-pedo",
     "nombre": "Penal a Pedo",
     "descripcion": "Penales muy divertidos donde el jugador se infla la panza.",
-    "archivo": "",
+    "archivo": "juegos/penal-a-pedo.html",
     "estado": "jugable",
     "icono": "penal"
   },
@@ -27,7 +27,7 @@
     "id": "pis-al-golf",
     "nombre": "Pis al Golf",
     "descripcion": "Un golf distinto con una barra de potencia que se frena a tiempo.",
-    "archivo": "",
+    "archivo": "juegos/pis-al-golf.html",
     "estado": "jugable",
     "icono": "golf"
   }
