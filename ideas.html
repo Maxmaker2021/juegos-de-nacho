@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mandá tu idea · Juegos de Nacho</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-head">
+    <a class="logo" href="index.html">Juegos de Nacho</a>
+    <nav aria-label="Principal">
+      <a href="index.html">Juegos</a>
+      <a href="ideas.html" aria-current="page">Mandá tu idea</a>
+      <a href="muro.html">Muro de ideas</a>
+    </nav>
+  </header>
+
+  <main class="block" style="max-width:720px">
+    <h1>Mandá tu idea</h1>
+    <p class="lead">Escribí o dibujá cómo mejorar un juego, un personaje nuevo, una botella o un juego entero. Un adulto lo revisa antes de que se publique.</p>
+
+    <div class="panel note">
+      <b>Cuidemos tus datos:</b> usá solo un apodo, sin tu nombre completo, tu escuela, tu dirección ni tu teléfono. No escribas datos de otras personas.
+    </div>
+
+    <form class="panel ideas" id="f" name="ideas" method="POST" enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="ideas">
+      <p class="trap" aria-hidden="true"><label>No completar <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <input type="file" name="dibujo" accept="image/png" hidden>
+
+      <div class="two">
+        <div class="field">
+          <label for="tipo">¿Qué querés mandar?</label>
+          <select id="tipo" name="tipo">
+            <option>Una idea para mejorar</option>
+            <option>Un personaje</option>
+            <option>Una botella nueva</option>
+            <option>Un juego nuevo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="juego">¿Para qué juego?</label>
+          <select id="juego" name="juego">
+            <option>Botellitas Saltarinas</option>
+            <option>Gomera Loca</option>
+            <option>Penal a Pedo</option>
+            <option>Pis al Golf</option>
+            <option>Un juego nuevo</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="idea">Tu idea</label>
+        <textarea id="idea" name="idea" maxlength="400" placeholder="Por ejemplo: una botella con alas que salte más lejos"></textarea>
+        <span class="hint" id="count">400 letras disponibles</span>
+      </div>
+
+      <div class="field pad">
+        <span class="lbl">Tu dibujo (opcional)</span>
+        <div class="tools" role="group" aria-label="Colores">
+          <button type="button" class="sw" data-c="#10222D" style="background:#10222D" aria-label="Negro" aria-pressed="true"></button>
+          <button type="button" class="sw" data-c="#E2492A" style="background:#E2492A" aria-label="Rojo" aria-pressed="false"></button>
+          <button type="button" class="sw" data-c="#F2994A" style="background:#F2994A" aria-label="Naranja" aria-pressed="false"></button>
+          <button type="button" class="sw" data-c="#F2C94C" style="background:#F2C94C" aria-label="Amarillo" aria-pressed="false"></button>
+          <button type="button" class="sw" data-c="#27AE60" style="background:#27AE60" aria-label="Verde" aria-pressed="false"></button>
+          <button type="button" class="sw" data-c="#2F80ED" style="background:#2F80ED" aria-label="Azul" aria-pressed="false"></button>
+          <button type="button" class="sw" data-c="#9B51E0" style="background:#9B51E0" aria-label="Violeta" aria-pressed="false"></button>
+          <button type="button" class="sw" data-c="#8B5A2B" style="background:#8B5A2B" aria-label="Marrón" aria-pressed="false"></button>
+        </div>
+        <div class="tools" role="group" aria-label="Herramientas">
+          <button type="button" class="tool" data-s="5" aria-pressed="false">Fino</button>
+          <button type="button" class="tool" data-s="10" aria-pressed="true">Medio</button>
+          <button type="button" class="tool" data-s="20" aria-pressed="false">Grueso</button>
+          <button type="button" class="tool" id="eraser" aria-pressed="false">Goma</button>
+          <button type="button" class="tool" id="undo">Deshacer</button>
+          <button type="button" class="tool" id="clear">Borrar todo</button>
+        </div>
+        <canvas id="draw" width="640" height="640" aria-label="Espacio para dibujar"></canvas>
+      </div>
+
+      <div class="field">
+        <label for="apodo">Tu apodo (opcional)</label>
+        <input type="text" id="apodo" name="apodo" maxlength="20" autocomplete="off" placeholder="Por ejemplo: Dragón veloz">
+        <span class="hint">No uses tu nombre real.</span>
+      </div>
+
+      <label class="check"><input type="checkbox" id="permiso" name="permiso" value="si"> <span>Un adulto me ayudó o me dio permiso para mandar esto.</span></label>
+
+      <div class="status" id="msg" role="status" aria-live="polite" hidden></div>
+      <div class="row"><button class="btn primary" type="submit" id="send">Enviar a Nacho</button></div>
+    </form>
+
+    <div class="panel" id="thanks" hidden>
+      <h2>¡Gracias!</h2>
+      <p>Tu idea llegó. Un adulto la va a revisar. Si se aprueba, la vas a ver en el muro.</p>
+      <div class="row"><a class="btn primary" href="muro.html">Ver el muro</a><a class="btn" href="ideas.html">Mandar otra</a></div>
+    </div>
+  </main>
+
+  <footer class="site">
+    <span>Sin anuncios. Sin cuentas. No guardamos datos personales.</span>
+    <a href="privacidad.html">Privacidad</a>
+  </footer>
+</div>
+<script src="ideas.js"></script>
+</body>
+</html>

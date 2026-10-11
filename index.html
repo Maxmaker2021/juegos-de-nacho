@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juegos de Nacho</title>
+<meta name="description" content="Juegos gratis hechos por Nacho y su papá. Sin anuncios, sin cuentas. Jugá y mandá tus ideas y dibujos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-head">
+    <a class="logo" href="index.html">Juegos de Nacho</a>
+    <nav aria-label="Principal">
+      <a href="index.html" aria-current="page">Juegos</a>
+      <a href="ideas.html">Mandá tu idea</a>
+      <a href="muro.html">Muro de ideas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Juegos hechos por <span>Nacho</span></h1>
+      <p class="lead">Gratis, para jugar en el celu, la tablet o la compu. Sin anuncios y sin crear cuenta. Jugá y ayudá a Nacho con tus ideas y dibujos.</p>
+      <div class="row">
+        <a class="btn primary" href="juegos/botellitas.html">Jugar Botellitas</a>
+        <a class="btn" href="ideas.html">Mandá tu idea</a>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="t-juegos">
+      <h2 id="t-juegos">Los juegos</h2>
+      <div class="games" id="games" aria-live="polite"></div>
+    </section>
+
+    <section class="block" aria-labelledby="t-ayuda">
+      <h2 id="t-ayuda">Ayudá a Nacho</h2>
+      <ol class="steps">
+        <li><b>Jugá</b><span>Probá los juegos y fijate qué te gusta y qué cambiarías.</span></li>
+        <li><b>Escribí o dibujá</b><span>Mandá una idea para mejorar un juego o inventá uno nuevo.</span></li>
+        <li><b>Mirá el muro</b><span>Las ideas que se aprueban aparecen en el muro para que las vea todo el mundo.</span></li>
+      </ol>
+      <div class="row">
+        <a class="btn primary" href="ideas.html">Mandá tu idea o dibujo</a>
+        <a class="btn" href="muro.html">Ver el muro</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <span>Sin anuncios. Sin cuentas. No guardamos datos personales.</span>
+    <a href="privacidad.html">Privacidad</a>
+  </footer>
+</div>
+<script src="juegos.js"></script>
+</body>
+</html>

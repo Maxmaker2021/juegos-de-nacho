@@ -1,0 +1,34 @@
+[
+  {
+    "id": "botellitas",
+    "nombre": "Botellitas Saltarinas",
+    "descripcion": "Tocá una, dos o tres veces para saltar con la botella hasta la meta. 300 niveles y 81 botellas para coleccionar.",
+    "archivo": "juegos/botellitas.html",
+    "estado": "jugable",
+    "icono": "botella"
+  },
+  {
+    "id": "gomera-loca",
+    "nombre": "Gomera Loca",
+    "descripcion": "Una gomera contra pollos voladores. Tenés tres vidas.",
+    "archivo": "",
+    "estado": "proximamente",
+    "icono": "gomera"
+  },
+  {
+    "id": "penal-a-pedo",
+    "nombre": "Penal a Pedo",
+    "descripcion": "Penales muy divertidos donde el jugador se infla la panza.",
+    "archivo": "",
+    "estado": "proximamente",
+    "icono": "penal"
+  },
+  {
+    "id": "pis-al-golf",
+    "nombre": "Pis al Golf",
+    "descripcion": "Un golf distinto con una barra de potencia que se frena a tiempo.",
+    "archivo": "",
+    "estado": "proximamente",
+    "icono": "golf"
+  }
+]
